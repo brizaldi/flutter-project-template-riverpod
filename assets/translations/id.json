@@ -1,0 +1,15 @@
+{
+	"cacheUserError": "Gagal menyimpan data pengguna.",
+	"deleteCacheUserError": "Gagal menghapus data pengguna.",
+	"getCachedLocaleError": "Gagal mendapatkan konfigurasi bahasa",
+	"home": "Beranda",
+	"noConnectionError": "Sambungan jaringan lambat atau sedang tidak tersedia. Silakan periksa pengaturan internet anda.",
+	"password": "Kata sandi",
+	"serverError": "Terjadi kesalahan server. Silakan coba lagi nanti.",
+	"shortPasswordVerificationText": "Kata sandi harus memiliki minimal 6 karakter",
+	"signIn": "Masuk",
+	"signInStatusError": "Gagal saat mendapatkan status sign in",
+	"signOut": "Keluar",
+	"validEmailVerificationText": "Harap masukkan alamat email yang valid",
+	"welcomeUser": "Selamat datang {userName}"
+}

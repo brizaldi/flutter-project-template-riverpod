@@ -1,0 +1,11 @@
+# Run it using below commands:
+# flutter pub get
+# flutter pub run flutter_launcher_icons:main
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path_android: "assets/images/ios_launcher_icon.png"
+  image_path_ios: "assets/images/ios_launcher_icon.png"
+  adaptive_icon_background: "#ffffff"
+  adaptive_icon_foreground: "assets/images/android_launcher_icon.png"

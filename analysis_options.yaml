@@ -1,0 +1,31 @@
+include: package:very_good_analysis/analysis_options.yaml
+
+analyzer:
+  exclude:
+    - lib/**/*.gr.dart
+    - lib/**/*.config.dart
+    - lib/**/*.g.dart
+    - lib/**/*.freezed.dart
+    - test/**/*.mocks.dart
+
+  strong-mode:
+    implicit-casts: true
+    implicit-dynamic: true
+
+  errors:
+    # Allow having TODOs in the code.
+    todo: ignore
+    
+    # https://github.com/rrousselGit/freezed/issues/488
+    invalid_annotation_target: ignore
+
+# LINTER Preferences
+#
+# Disable unwanted or conflicting lint rules.
+linter:
+  rules:
+    always_use_package_imports: false
+    avoid_print: false
+    prefer_relative_imports: true
+    public_member_api_docs: false
+    sort_pub_dependencies: false

@@ -6,7 +6,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import '../../../../../extra/langs/locale_keys.g.dart';
 import '../../../../../extra/routes/app_router.gr.dart';
 import '../../../../auth/shared/providers.dart';
-import '../../../shared/providers.dart';
+import '../../shared/providers.dart';
 
 class HomeScaffold extends HookConsumerWidget {
   const HomeScaffold({Key? key}) : super(key: key);

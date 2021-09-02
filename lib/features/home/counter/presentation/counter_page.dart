@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../shared/providers.dart';
+import '../../core/shared/providers.dart';
 
 class CounterPage extends HookConsumerWidget {
   const CounterPage({Key? key}) : super(key: key);

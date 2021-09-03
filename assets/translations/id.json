@@ -11,5 +11,6 @@
 	"signInStatusError": "Gagal saat mendapatkan status sign in",
 	"signOut": "Keluar",
 	"validEmailVerificationText": "Harap masukkan alamat email yang valid",
+	"emptyStringVerificationText": "Bagian ini tidak boleh kosong",
 	"welcomeUser": "Selamat datang {userName}"
 }

@@ -2,6 +2,7 @@ import 'package:dartz/dartz.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
+import '../../../core/domain/validator.dart';
 import '../../domain/auth_failure.dart';
 import '../../domain/value_objects.dart';
 import '../../infrastructure/auth_repository.dart';
@@ -31,10 +32,7 @@ class SignInFormNotifier extends StateNotifier<SignInFormState> {
   Future<void> signInWithEmailAndPassword() async {
     Either<AuthFailure, Unit>? signInFailureOrSuccess;
 
-    final isEmailValid = state.email.isValid();
-    final isPasswordValid = state.password.isValid();
-
-    if (isEmailValid && isPasswordValid) {
+    if (isValid) {
       state = state.copyWith(
         isSubmitting: true,
         failureOrSuccessOption: none(),
@@ -51,5 +49,14 @@ class SignInFormNotifier extends StateNotifier<SignInFormState> {
       showErrorMessages: true,
       failureOrSuccessOption: optionOf(signInFailureOrSuccess),
     );
+  }
+
+  bool get isValid {
+    final values = [
+      state.email,
+      state.password,
+    ];
+
+    return Validator.validate(values);
   }
 }

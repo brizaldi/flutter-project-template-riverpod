@@ -11,5 +11,6 @@
 	"signInStatusError": "Failed getting sign in status",
 	"signOut": "Sign Out",
 	"validEmailVerificationText": "Please input a valid email address",
+	"emptyStringVerificationText": "This field cannot be empty",
 	"welcomeUser": "Welcome {userName}"
 }

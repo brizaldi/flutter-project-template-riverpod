@@ -7,7 +7,7 @@ import '../../core/domain/value_validators.dart';
 class Email extends ValueObject<String> {
   factory Email(String input) {
     return Email._(
-      validateEmail(input),
+      validateStringNotEmpty(input).flatMap(validateEmail),
     );
   }
 

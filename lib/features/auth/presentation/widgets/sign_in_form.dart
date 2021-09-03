@@ -29,15 +29,19 @@ class SignInForm extends HookConsumerWidget {
             onChanged: (value) => ref
                 .read(signInFormNotifierProvider.notifier)
                 .changeEmail(value),
-            validator: (_) =>
-                ref.read(signInFormNotifierProvider).email.value.fold(
-                      (f) => f.maybeMap(
-                        invalidEmail: (_) =>
-                            LocaleKeys.validEmailVerificationText.tr(),
-                        orElse: () => null,
-                      ),
-                      (_) => null,
-                    ),
+            validator: (_) => ref
+                .read(signInFormNotifierProvider)
+                .email
+                .value
+                .fold(
+                  (f) => f.maybeMap(
+                    invalidEmail: (_) =>
+                        LocaleKeys.validEmailVerificationText.tr(),
+                    empty: (_) => LocaleKeys.emptyStringVerificationText.tr(),
+                    orElse: () => null,
+                  ),
+                  (_) => null,
+                ),
           ),
           const SizedBox(height: 8),
           TextFormField(

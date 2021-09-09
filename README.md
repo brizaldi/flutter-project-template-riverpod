@@ -1,16 +1,22 @@
 # flutter_project_template_riverpod
 
-A new Flutter project.
+## Installation
+- Add [Flutter](https://flutter.dev/docs/get-started/install 'Flutter') to your machine
+- Open this project folder with Terminal/CMD
+- Ensure there's no cache/build leftover by running `flutter clean` in the Terminal
+- Run in the Terminal `flutter packages get`
+- Run in the Terminal `flutter packages pub run build_runner build --delete-conflicting-outputs`
 
-## Getting Started
+## Running the App
+- Open Android Emulator
+- Run `flutter run --flavor {RELEASE_TYPE}`
+- Supported release type: `development`, `staging`, and `production`
 
-This project is a starting point for a Flutter application.
+## Build an APK
+- Run `flutter build apk --flavor {RELEASE_TYPE}`
+- The apk will be saved under this location: `[project]/build/app/outputs/flutter-apk/`
 
-A few resources to get you started if this is your first Flutter project:
+For more information, check out the [official documentation](https://flutter.dev/docs 'documentation')
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## TODO
+- Add configuration for iOS

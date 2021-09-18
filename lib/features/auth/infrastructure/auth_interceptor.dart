@@ -1,21 +1,23 @@
 import 'package:dio/dio.dart';
 
-import 'auth_local_service.dart';
+import 'auth_repository.dart';
 
 class AuthInterceptor extends Interceptor {
-  AuthInterceptor(this._localService);
+  AuthInterceptor(this._repository);
 
-  final AuthLocalService _localService;
+  final AuthRepository _repository;
 
   @override
   Future onRequest(
     RequestOptions options,
     RequestInterceptorHandler handler,
   ) async {
-    final token = await _localService.getCachedToken();
+    final storedCredentials = await _repository.getSignedInCredentials();
     final modifiedOptions = options
       ..headers.addAll(
-        token == null ? {} : {'Authorization': 'bearer $token'},
+        storedCredentials == null
+            ? {}
+            : {'Authorization': 'bearer $storedCredentials'},
       );
     handler.next(modifiedOptions);
   }

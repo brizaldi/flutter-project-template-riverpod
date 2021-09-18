@@ -1,7 +1,5 @@
 {
-	"cacheUserError": "Saving user data failed.",
-	"deleteCacheUserError": "Failed to remove user data.",
-	"getCachedLocaleError": "Failed getting saved locale",
+	"storageError": "Oops, there's a problem accessing local storage.",
 	"home": "Home",
 	"noConnectionError": "Slow or no network connection. Please check your internet settings.",
 	"password": "Password",

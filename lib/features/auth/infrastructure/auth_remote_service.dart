@@ -9,11 +9,9 @@ class AuthRemoteService {
 
   final Dio _dio;
 
-  Future<void> signOut() {
+  Future<void> signOut() async {
     try {
-      return Future.delayed(const Duration(seconds: 1), () {
-        return;
-      });
+      await _dio.get('logout');
     } on DioError catch (e) {
       if (e.isNoConnectionError) {
         throw NoConnectionException();

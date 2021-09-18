@@ -1,7 +1,5 @@
 {
-	"cacheUserError": "Gagal menyimpan data pengguna.",
-	"deleteCacheUserError": "Gagal menghapus data pengguna.",
-	"getCachedLocaleError": "Gagal mendapatkan konfigurasi bahasa",
+	"storageError": "Ups, terjadi kesalahan saat akses ke penyimpanan lokal.",
 	"home": "Beranda",
 	"noConnectionError": "Sambungan jaringan lambat atau sedang tidak tersedia. Silakan periksa pengaturan internet anda.",
 	"password": "Kata sandi",

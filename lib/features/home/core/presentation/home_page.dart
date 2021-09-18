@@ -23,7 +23,7 @@ class HomePage extends HookConsumerWidget {
         failure: (failure) => AlertHelper.showSnackBar(
           context,
           message: failure.map(
-            cache: (_) => LocaleKeys.deleteCacheUserError.tr(),
+            storage: (_) => LocaleKeys.storageError.tr(),
             server: (value) => value.message ?? LocaleKeys.serverError.tr(),
             noConnection: (_) => LocaleKeys.noConnectionError.tr(),
           ),

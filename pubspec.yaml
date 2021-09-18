@@ -22,13 +22,13 @@ dependencies:
   #* Icons
   flutter_vector_icons: ^1.0.0
 
-  # * Firebase
+  #* Firebase
   firebase_analytics: ^8.3.2
   firebase_core: ^1.6.0
   firebase_crashlytics: ^2.2.1
   firebase_messaging: ^10.0.7
 
-  # * Local notification
+  #* Local notification
   awesome_notifications: ^0.0.6+10
 
   #* Network
@@ -37,18 +37,19 @@ dependencies:
 
   #* Dart data class
   freezed_annotation: ^0.14.3
-  json_serializable: ^5.0.0
+  json_serializable: ^5.0.1
 
   #* State management
   hooks_riverpod: ^1.0.0-dev.7
 
   #* Logging
-  logging: ^1.0.1
+  logging: ^1.0.2
 
   #* Routing
   auto_route: ^2.3.2
 
   #* Persistent storage
+  flutter_secure_storage: ^4.2.1
   hive_flutter: ^1.1.0
 
   #* Localization

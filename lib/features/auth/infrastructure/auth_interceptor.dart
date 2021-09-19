@@ -8,17 +8,19 @@ class AuthInterceptor extends Interceptor {
   final AuthRepository _repository;
 
   @override
-  Future onRequest(
+  Future<dynamic> onRequest(
     RequestOptions options,
     RequestInterceptorHandler handler,
   ) async {
     final storedCredentials = await _repository.getSignedInCredentials();
-    final modifiedOptions = options
+
+    final RequestOptions modifiedOptions = options
       ..headers.addAll(
         storedCredentials == null
-            ? {}
-            : {'Authorization': 'bearer $storedCredentials'},
+            ? <String, String>{}
+            : <String, String>{'Authorization': 'bearer $storedCredentials'},
       );
+
     handler.next(modifiedOptions);
   }
 }

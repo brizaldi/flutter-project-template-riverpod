@@ -14,7 +14,7 @@ abstract class Env {
           .invokeMethod<String>('getFlavor')
           .then((flavor) async {
         BuildConfig.init(flavor: flavor);
-      }).catchError((error) {
+      }).catchError((Object error) {
         print('Cannot get flavor');
         print(error);
       });

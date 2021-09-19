@@ -11,7 +11,7 @@ class AuthRemoteService {
 
   Future<void> signOut() async {
     try {
-      await _dio.get('logout');
+      await _dio.get<dynamic>('logout');
     } on DioError catch (e) {
       if (e.isNoConnectionError) {
         throw NoConnectionException();
@@ -28,31 +28,31 @@ class AuthRemoteService {
     required String password,
   }) async {
     try {
-      final response = await _dio.post(
+      final response = await _dio.post<Map<String, dynamic>>(
         'login',
-        data: {
+        data: <String, String>{
           'email': email,
           'password': password,
         },
       );
 
       if (response.statusCode == 201) {
-        final responseData = response.data as Map<String, dynamic>;
-        final token = responseData['token'];
+        final token = response.data?['token'] as String?;
 
-        return AuthResponse.withToken(token);
-      } else {
-        if (response.data is Map<String, dynamic>) {
-          final responseData = response.data as Map<String, dynamic>;
-          return AuthResponse.failure(
-            errorCode: response.statusCode,
-            message: responseData['message'],
-          );
+        if (token != null) {
+          return AuthResponse.withToken(token);
         } else {
-          return AuthResponse.failure(
-            errorCode: response.statusCode,
+          return const AuthResponse.failure(
+            errorCode: 404,
+            message: 'Credential token not found',
           );
         }
+      } else {
+        final message = response.data?['message'] as String?;
+        return AuthResponse.failure(
+          errorCode: response.statusCode,
+          message: message,
+        );
       }
     } on DioError catch (e) {
       if (e.isNoConnectionError) {

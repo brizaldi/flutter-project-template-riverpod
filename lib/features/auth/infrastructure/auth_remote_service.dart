@@ -13,7 +13,7 @@ class AuthRemoteService {
     try {
       await _dio.get<dynamic>('logout');
     } on DioError catch (e) {
-      if (e.isNoConnectionError) {
+      if (e.isNoConnectionError || e.isConnectionTimeout) {
         throw NoConnectionException();
       } else if (e.response != null) {
         throw RestApiException(e.response?.statusCode);
@@ -55,7 +55,7 @@ class AuthRemoteService {
         );
       }
     } on DioError catch (e) {
-      if (e.isNoConnectionError) {
+      if (e.isNoConnectionError || e.isConnectionTimeout) {
         throw NoConnectionException();
       } else if (e.response != null) {
         throw RestApiException(e.response?.statusCode);

@@ -16,7 +16,7 @@ class HomePage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     ref.listen<SignOutState>(
       signOutNotifierProvider,
-      (state) => state.maybeWhen(
+      (_, state) => state.maybeWhen(
         orElse: () {},
         success: () =>
             ref.read(authNotifierProvider.notifier).checkAndUpdateAuthStatus(),

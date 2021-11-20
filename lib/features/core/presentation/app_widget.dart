@@ -49,8 +49,8 @@ class AppWidget extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     ref
-      ..listen(initializationProvider, (_) {})
-      ..listen<AuthState>(authNotifierProvider, (state) {
+      ..listen(initializationProvider, (_, __) {})
+      ..listen<AuthState>(authNotifierProvider, (_, state) {
         state.maybeMap(
           orElse: () {},
           authenticated: (_) => _appRouter.pushAndPopUntil(

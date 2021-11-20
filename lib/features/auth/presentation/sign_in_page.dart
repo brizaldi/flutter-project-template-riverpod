@@ -19,7 +19,7 @@ class SignInPage extends HookConsumerWidget {
       signInFormNotifierProvider.select(
         (state) => state.failureOrSuccessOption,
       ),
-      (failureOrSuccessOption) => failureOrSuccessOption.fold(
+      (_, failureOrSuccessOption) => failureOrSuccessOption.fold(
         () {},
         (either) => either.fold(
           (failure) => AlertHelper.showSnackBar(

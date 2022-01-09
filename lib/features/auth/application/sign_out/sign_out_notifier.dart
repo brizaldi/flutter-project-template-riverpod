@@ -16,7 +16,7 @@ class SignOutNotifier extends StateNotifier<SignOutState> {
     state = const SignOutState.inProgress();
     final failureOrSuccess = await _repository.signOut();
     state = failureOrSuccess.fold(
-      (failure) => SignOutState.failure(failure),
+      SignOutState.failure,
       (_) => const SignOutState.success(),
     );
   }

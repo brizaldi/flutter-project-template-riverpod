@@ -47,6 +47,11 @@
 **/android/local.properties
 **/android/**/GeneratedPluginRegistrant.java
 
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
+
 # iOS/XCode related
 **/ios/**/*.mode1v3
 **/ios/**/*.mode2v3

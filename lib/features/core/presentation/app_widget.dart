@@ -1,13 +1,11 @@
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
 import '../../../extra/config/configuration.dart';
-import '../../../extra/constants/strings.dart';
-import '../../../extra/langs/locale_keys.g.dart';
 import '../../../extra/routes/app_router.gr.dart';
 import '../../../extra/style/style.dart';
 import '../../auth/application/auth/auth_notifier.dart';
@@ -64,7 +62,7 @@ class AppWidget extends HookConsumerWidget {
           failure: (failure) {
             AlertHelper.showSnackBar(
               context,
-              message: LocaleKeys.signInStatusError.tr(),
+              message: AppLocalizations.of(context)!.signInStatusError,
             );
           },
         );
@@ -73,10 +71,10 @@ class AppWidget extends HookConsumerWidget {
     return MaterialApp.router(
       routerDelegate: _appRouter.delegate(),
       routeInformationParser: _appRouter.defaultRouteParser(),
-      onGenerateTitle: (BuildContext context) => Strings.appName,
-      localizationsDelegates: context.localizationDelegates,
-      supportedLocales: context.supportedLocales,
-      locale: context.locale,
+      onGenerateTitle: (BuildContext context) =>
+          AppLocalizations.of(context)!.appTitle,
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
       theme: Themes.lightTheme(context),
       darkTheme: Themes.darkTheme(context),
       themeMode: ThemeMode.light,

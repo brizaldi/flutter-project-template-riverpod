@@ -1,8 +1,7 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../../../extra/langs/locale_keys.g.dart';
 import '../../shared/providers.dart';
 
 class SignInForm extends HookConsumerWidget {
@@ -29,25 +28,23 @@ class SignInForm extends HookConsumerWidget {
             onChanged: (value) => ref
                 .read(signInFormNotifierProvider.notifier)
                 .changeEmail(value),
-            validator: (_) => ref
-                .read(signInFormNotifierProvider)
-                .email
-                .value
-                .fold(
-                  (f) => f.maybeMap(
-                    invalidEmail: (_) =>
-                        LocaleKeys.validEmailVerificationText.tr(),
-                    empty: (_) => LocaleKeys.emptyStringVerificationText.tr(),
-                    orElse: () => null,
-                  ),
-                  (_) => null,
-                ),
+            validator: (_) =>
+                ref.read(signInFormNotifierProvider).email.value.fold(
+                      (f) => f.maybeMap(
+                        invalidEmail: (_) => AppLocalizations.of(context)!
+                            .validEmailVerificationText,
+                        empty: (_) => AppLocalizations.of(context)!
+                            .emptyStringVerificationText,
+                        orElse: () => null,
+                      ),
+                      (_) => null,
+                    ),
           ),
           const SizedBox(height: 8),
           TextFormField(
             decoration: InputDecoration(
               prefixIcon: const Icon(Icons.lock),
-              labelText: LocaleKeys.password.tr(),
+              labelText: AppLocalizations.of(context)!.password,
             ),
             obscureText: true,
             onChanged: (value) => ref
@@ -56,8 +53,8 @@ class SignInForm extends HookConsumerWidget {
             validator: (_) =>
                 ref.read(signInFormNotifierProvider).password.value.fold(
                       (f) => f.maybeMap(
-                        shortPassword: (_) =>
-                            LocaleKeys.shortPasswordVerificationText.tr(),
+                        shortPassword: (_) => AppLocalizations.of(context)!
+                            .shortPasswordVerificationText,
                         orElse: () => null,
                       ),
                       (_) => null,

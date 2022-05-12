@@ -12,6 +12,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
 
   #* UI
   cached_network_image: ^3.2.0
@@ -53,7 +55,7 @@ dependencies:
   hive_flutter: ^1.1.0
 
   #* Localization
-  easy_localization: ^3.0.0
+  intl: ^0.17.0
 
   #* Date Time util
   jiffy: ^5.0.0
@@ -80,10 +82,9 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
+  # Enable generation of localized Strings from arb files.
+  generate: true
+
   assets:
     # Add assets from the images directory to the application.
     - assets/images/
-    # Translation folder path containing .json files
-    # run in terminal to generate localization keys:
-    # flutter pub run easy_localization:generate -f keys -S assets/translations -O lib/extra/langs -o locale_keys.g.dart
-    - assets/translations/

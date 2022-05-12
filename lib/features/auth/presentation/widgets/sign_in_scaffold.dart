@@ -1,9 +1,8 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../../../extra/langs/locale_keys.g.dart';
 import '../../shared/providers.dart';
 import 'sign_in_form.dart';
 
@@ -15,7 +14,7 @@ class SignInScaffold extends HookConsumerWidget {
     return KeyboardDismissOnTap(
       child: Scaffold(
         appBar: AppBar(
-          title: Text(LocaleKeys.signIn.tr()),
+          title: Text(AppLocalizations.of(context)!.signIn),
         ),
         body: ListView(
           padding: const EdgeInsets.all(16),
@@ -29,7 +28,7 @@ class SignInScaffold extends HookConsumerWidget {
                     .read(signInFormNotifierProvider.notifier)
                     .signInWithEmailAndPassword();
               },
-              child: Text(LocaleKeys.signIn.tr()),
+              child: Text(AppLocalizations.of(context)!.signIn),
             ),
           ],
         ),

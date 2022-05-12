@@ -1,0 +1,20 @@
+{
+  "appTitle": "Project Template",
+  "storageError": "Oops, there's a problem accessing local storage.",
+  "home": "Home",
+  "noConnectionError": "Slow or no network connection. Please check your internet settings.",
+  "password": "Password",
+  "serverError": "Server error occured. Please try again later.",
+  "shortPasswordVerificationText": "Password must have minimum of 6 characters",
+  "signIn": "Sign In",
+  "signInStatusError": "Failed getting sign in status",
+  "signOut": "Sign Out",
+  "validEmailVerificationText": "Please input a valid email address",
+  "emptyStringVerificationText": "This field cannot be empty",
+  "welcomeUser": "Welcome {userName}",
+  "@welcomeUser": {
+    "placeholders": {
+      "userName": {}
+    }
+  }
+}

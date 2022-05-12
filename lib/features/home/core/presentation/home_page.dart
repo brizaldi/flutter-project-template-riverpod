@@ -17,7 +17,7 @@ class HomePage extends HookConsumerWidget {
     ref.listen<SignOutState>(
       signOutNotifierProvider,
       (_, state) => state.maybeWhen(
-        orElse: () {},
+        orElse: () => null,
         success: () =>
             ref.read(authNotifierProvider.notifier).checkAndUpdateAuthStatus(),
         failure: (failure) => AlertHelper.showSnackBar(

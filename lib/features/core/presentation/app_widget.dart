@@ -73,7 +73,7 @@ class AppWidget extends HookConsumerWidget {
     return MaterialApp.router(
       routerDelegate: _appRouter.delegate(),
       routeInformationParser: _appRouter.defaultRouteParser(),
-      title: Strings.appName,
+      onGenerateTitle: (BuildContext context) => Strings.appName,
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,

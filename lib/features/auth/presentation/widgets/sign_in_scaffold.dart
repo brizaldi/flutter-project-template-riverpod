@@ -7,7 +7,7 @@ import '../../shared/providers.dart';
 import 'sign_in_form.dart';
 
 class SignInScaffold extends HookConsumerWidget {
-  const SignInScaffold({Key? key}) : super(key: key);
+  const SignInScaffold({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

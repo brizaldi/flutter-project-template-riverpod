@@ -3,7 +3,7 @@ import 'failures.dart';
 class UnexpectedValueError extends Error {
   UnexpectedValueError(this.valueFailure);
 
-  final ValueFailure valueFailure;
+  final ValueFailure<dynamic> valueFailure;
 
   @override
   String toString() {

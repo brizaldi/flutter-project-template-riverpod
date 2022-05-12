@@ -36,7 +36,6 @@
 **.g.dart
 **.freezed.dart
 **.mocks.dart
-**.config.dart
 
 # Android related
 **/android/**/gradle-wrapper.jar

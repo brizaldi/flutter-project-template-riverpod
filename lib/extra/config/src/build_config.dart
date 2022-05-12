@@ -41,9 +41,12 @@ class BuildConfig {
   static late BuildConfig _instance;
 
   static void init({String? flavor}) {
-    print('╔══════════════════════════════════════════════════════════════╗');
-    print('                    Build Flavor: $flavor                       ');
-    print('╚══════════════════════════════════════════════════════════════╝');
+    debugPrint(
+        '╔══════════════════════════════════════════════════════════════╗');
+    debugPrint(
+        '                    Build Flavor: $flavor                       ');
+    debugPrint(
+        '╚══════════════════════════════════════════════════════════════╝');
     switch (flavor) {
       case 'development':
         _instance = const BuildConfig._development();

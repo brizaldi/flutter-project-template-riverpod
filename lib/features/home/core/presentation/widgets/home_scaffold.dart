@@ -8,7 +8,7 @@ import '../../../../auth/shared/providers.dart';
 import '../../shared/providers.dart';
 
 class HomeScaffold extends HookConsumerWidget {
-  const HomeScaffold({Key? key}) : super(key: key);
+  const HomeScaffold({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

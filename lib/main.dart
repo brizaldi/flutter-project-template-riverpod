@@ -13,7 +13,7 @@ class Main extends Env {
   FutureOr<HookConsumerWidget> onCreate() {
     ErrorWidget.builder = (details) {
       Zone.current.handleUncaughtError(details.exception, details.stack!);
-      return Container(color: Colors.transparent);
+      return const ColoredBox(color: Colors.transparent);
     };
 
     return AppWidget();

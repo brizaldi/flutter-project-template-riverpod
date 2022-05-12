@@ -5,7 +5,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import '../../shared/providers.dart';
 
 class SignInForm extends HookConsumerWidget {
-  const SignInForm({Key? key}) : super(key: key);
+  const SignInForm({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

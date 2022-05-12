@@ -10,7 +10,7 @@ import '../shared/providers.dart';
 import 'widgets/sign_in_scaffold.dart';
 
 class SignInPage extends HookConsumerWidget {
-  const SignInPage({Key? key}) : super(key: key);
+  const SignInPage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

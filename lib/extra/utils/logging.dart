@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:logging/logging.dart';
 
 class Log {
@@ -6,7 +7,7 @@ class Log {
 
   static Future<void> init() async {
     Logger.root.onRecord.listen((record) {
-      print('${record.level.name}: ${record.time}: ${record.message}');
+      debugPrint('${record.level.name}: ${record.time}: ${record.message}');
     });
     _instance = Logger(_name);
   }

@@ -6,6 +6,11 @@ abstract class Env {
   }
 
   void _init() {
+    if (kReleaseMode) {
+      // Used to prevent printing in release mode
+      debugPrint = (String? message, {int? wrapWidth}) {};
+    }
+
     runZonedGuarded(() async {
       WidgetsFlutterBinding.ensureInitialized();
 
@@ -14,8 +19,8 @@ abstract class Env {
           .then((flavor) async {
         BuildConfig.init(flavor: flavor);
       }).catchError((Object error) {
-        print('Cannot get flavor');
-        print(error);
+        debugPrint('Cannot get flavor');
+        debugPrint(error.toString());
       });
 
       Themes.initUiOverlayStyle();
@@ -28,8 +33,8 @@ abstract class Env {
         ),
       );
     }, (obj, stack) {
-      print(obj);
-      print(stack);
+      debugPrint(obj.toString());
+      debugPrint(stack.toString());
     });
   }
 

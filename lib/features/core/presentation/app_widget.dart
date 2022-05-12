@@ -40,7 +40,7 @@ final initializationProvider = FutureProvider<Unit>((ref) async {
 });
 
 class AppWidget extends HookConsumerWidget {
-  AppWidget({Key? key}) : super(key: key);
+  AppWidget({super.key});
 
   final _appRouter = AppRouter();
 

@@ -3,9 +3,9 @@ import 'package:hive_flutter/hive_flutter.dart';
 import '../../../extra/constants/strings.dart';
 
 class HiveDatabase {
-  late Box _box;
+  late Box<dynamic> _box;
 
-  Box get box => _box;
+  Box<dynamic> get box => _box;
 
   bool _hasBeenInitialized = false;
 

@@ -1,5 +1,9 @@
 # flutter_project_template_riverpod
 
+## Requirements
+Flutter: 3.0.0
+Dart SDK: 2.17.0
+
 ## Installation
 - Add [Flutter](https://flutter.dev/docs/get-started/install 'Flutter') to your machine
 - Open this project folder with Terminal/CMD

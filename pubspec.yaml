@@ -25,10 +25,10 @@ dependencies:
   flutter_vector_icons: ^1.0.0
 
   #* Firebase
-  firebase_analytics: ^9.1.7
-  firebase_core: ^1.16.0
-  firebase_crashlytics: ^2.7.2
-  firebase_messaging: ^11.3.0
+  firebase_analytics: ^9.1.8
+  firebase_core: ^1.17.0
+  firebase_crashlytics: ^2.8.0
+  firebase_messaging: ^11.4.0
 
   #* Local notification
   awesome_notifications: ^0.6.21
@@ -42,13 +42,13 @@ dependencies:
   json_annotation: ^4.5.0
 
   #* State management
-  hooks_riverpod: ^1.0.3
+  hooks_riverpod: ^1.0.4
 
   #* Logging
   logging: ^1.0.2
 
   #* Routing
-  auto_route: ^4.0.0
+  auto_route: ^4.0.1
 
   #* Persistent storage
   flutter_secure_storage: ^5.0.2
@@ -73,7 +73,7 @@ dev_dependencies:
   build_runner: ^2.1.10
   flutter_launcher_icons: ^0.9.2
   flutter_native_splash: ^2.0.3
-  freezed: ^2.0.3
+  freezed: ^2.0.3+1
   json_serializable: ^6.2.0
 
 flutter:

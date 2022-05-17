@@ -16,6 +16,6 @@ class Main extends Env {
       return const ColoredBox(color: Colors.transparent);
     };
 
-    return AppWidget();
+    return const AppWidget();
   }
 }

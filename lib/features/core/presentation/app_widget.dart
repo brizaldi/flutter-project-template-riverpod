@@ -6,12 +6,9 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
 import '../../../extra/config/configuration.dart';
-import '../../../extra/routes/app_router.gr.dart';
 import '../../../extra/style/style.dart';
-import '../../auth/application/auth/auth_notifier.dart';
 import '../../auth/shared/providers.dart';
 import '../shared/providers.dart';
-import 'widgets/alert_helper.dart';
 
 final initializationProvider = FutureProvider<Unit>((ref) async {
   await ref.read(hiveProvider).init();
@@ -40,39 +37,18 @@ final initializationProvider = FutureProvider<Unit>((ref) async {
 });
 
 class AppWidget extends HookConsumerWidget {
-  AppWidget({super.key});
-
-  final _appRouter = AppRouter();
+  const AppWidget({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    ref
-      ..listen(initializationProvider, (_, __) {})
-      ..listen<AuthState>(authNotifierProvider, (_, state) {
-        state.maybeMap(
-          orElse: () {},
-          authenticated: (_) => _appRouter.pushAndPopUntil(
-            const HomeRouter(),
-            predicate: (route) => false,
-          ),
-          unauthenticated: (_) => _appRouter.pushAndPopUntil(
-            const SignInRoute(),
-            predicate: (route) => false,
-          ),
-          failure: (failure) {
-            AlertHelper.showSnackBar(
-              context,
-              message: AppLocalizations.of(context)!.signInStatusError,
-            );
-          },
-        );
-      });
+    ref.listen(initializationProvider, (_, __) {});
+
+    final router = ref.watch(routerProvider);
 
     return MaterialApp.router(
-      routerDelegate: _appRouter.delegate(),
-      routeInformationParser: _appRouter.defaultRouteParser(),
-      onGenerateTitle: (BuildContext context) =>
-          AppLocalizations.of(context)!.appTitle,
+      routeInformationParser: router.routeInformationParser,
+      routerDelegate: router.routerDelegate,
+      onGenerateTitle: (context) => AppLocalizations.of(context)!.appTitle,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
       theme: Themes.lightTheme(context),

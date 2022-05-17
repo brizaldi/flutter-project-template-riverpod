@@ -1,10 +1,10 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../../../../extra/routes/app_router.gr.dart';
 import '../../../../auth/shared/providers.dart';
+import '../../../../core/application/routes/name_route.dart';
 import '../../shared/providers.dart';
 
 class HomeScaffold extends HookConsumerWidget {
@@ -42,7 +42,7 @@ class HomeScaffold extends HookConsumerWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => context.pushRoute(const CounterRoute()),
+        onPressed: () => context.goNamed(counterNameRoute),
         child: const Icon(Icons.chevron_right),
       ),
     );

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
+import '../../../../extra/l10n/l10n.dart';
 import '../../shared/providers.dart';
 
 class SignInForm extends HookConsumerWidget {
@@ -9,6 +9,7 @@ class SignInForm extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = context.l10n;
     final showErrorMessages = ref.watch(
       signInFormNotifierProvider.select((state) => state.showErrorMessages),
     );
@@ -31,10 +32,8 @@ class SignInForm extends HookConsumerWidget {
             validator: (_) =>
                 ref.read(signInFormNotifierProvider).email.value.fold(
                       (f) => f.maybeMap(
-                        invalidEmail: (_) => AppLocalizations.of(context)!
-                            .validEmailVerificationText,
-                        empty: (_) => AppLocalizations.of(context)!
-                            .emptyStringVerificationText,
+                        invalidEmail: (_) => l10n.validEmailVerificationText,
+                        empty: (_) => l10n.emptyStringVerificationText,
                         orElse: () => null,
                       ),
                       (_) => null,
@@ -44,21 +43,23 @@ class SignInForm extends HookConsumerWidget {
           TextFormField(
             decoration: InputDecoration(
               prefixIcon: const Icon(Icons.lock),
-              labelText: AppLocalizations.of(context)!.password,
+              labelText: l10n.password,
             ),
             obscureText: true,
             onChanged: (value) => ref
                 .read(signInFormNotifierProvider.notifier)
                 .changePassword(value),
-            validator: (_) =>
-                ref.read(signInFormNotifierProvider).password.value.fold(
-                      (f) => f.maybeMap(
-                        shortPassword: (_) => AppLocalizations.of(context)!
-                            .shortPasswordVerificationText,
-                        orElse: () => null,
-                      ),
-                      (_) => null,
-                    ),
+            validator: (_) => ref
+                .read(signInFormNotifierProvider)
+                .password
+                .value
+                .fold(
+                  (f) => f.maybeMap(
+                    shortPassword: (_) => l10n.shortPasswordVerificationText,
+                    orElse: () => null,
+                  ),
+                  (_) => null,
+                ),
           ),
         ],
       ),

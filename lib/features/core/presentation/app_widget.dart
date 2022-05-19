@@ -1,11 +1,12 @@
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
 import '../../../extra/config/configuration.dart';
+import '../../../extra/constants/strings.dart';
+import '../../../extra/l10n/l10n.dart';
 import '../../../extra/style/style.dart';
 import '../../auth/shared/providers.dart';
 import '../shared/providers.dart';
@@ -48,7 +49,7 @@ class AppWidget extends HookConsumerWidget {
     return MaterialApp.router(
       routeInformationParser: router.routeInformationParser,
       routerDelegate: router.routerDelegate,
-      onGenerateTitle: (context) => AppLocalizations.of(context)!.appTitle,
+      title: Strings.appName,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
       theme: Themes.lightTheme(context),

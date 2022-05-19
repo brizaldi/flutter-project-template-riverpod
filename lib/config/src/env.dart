@@ -14,14 +14,7 @@ abstract class Env {
     runZonedGuarded(() async {
       WidgetsFlutterBinding.ensureInitialized();
 
-      await const MethodChannel('flavor')
-          .invokeMethod<String>('getFlavor')
-          .then((flavor) async {
-        BuildConfig.init(flavor: flavor);
-      }).catchError((Object error) {
-        debugPrint('Cannot get flavor');
-        debugPrint(error.toString());
-      });
+      BuildConfig.init(flavor: const String.fromEnvironment('flavor'));
 
       Themes.initUiOverlayStyle();
 

@@ -10,7 +10,9 @@
             "type": "dart",
             "args": [
                 "--flavor",
-                "development"
+                "development",
+                "--dart-define",
+                "flavor=development",
             ]
         },
         {
@@ -19,7 +21,9 @@
             "type": "dart",
             "args": [
                 "--flavor",
-                "staging"
+                "staging",
+                "--dart-define",
+                "flavor=staging",
             ]
         },
         {
@@ -28,7 +32,9 @@
             "type": "dart",
             "args": [
                 "--flavor",
-                "production"
+                "production",
+                "--dart-define",
+                "flavor=production",
             ]
         },
         {

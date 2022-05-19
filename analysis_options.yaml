@@ -468,6 +468,14 @@ linter:
     #   APPLICATION: disabled : With false value. (Default, assume we are making an app most of the time.)
     diagnostic_describe_all_properties: false
 
+    # Using values derived from the environment at compile-time, 
+    # creates hidden global state and makes applications hard to understand and maintain.
+    #
+    # https://dart-lang.github.io/linter/lints/do_not_use_environment.html
+    #
+    # Disabled, useful for getting flavor on platforms where flavors are not supported yet.
+    do_not_use_environment: false
+
     # DO Use Flutter TO-DO format.
     #
     # https://dart-lang.github.io/linter/lints/flutter_style_todos.html

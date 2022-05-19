@@ -18,17 +18,17 @@ Dart SDK: 2.17.0
 
 ## Running the App
 - Open Android Emulator or iOS Simulator
-- Run `flutter run --flavor {RELEASE_TYPE}`
+- Run `flutter run --flavor {RELEASE_TYPE} --dart-define flavor={RELEASE_TYPE}`
 - Supported release type: `development`, `staging`, and `production`
 
 ## Build an APK
 - Run `flutter build apk --flavor {RELEASE_TYPE}`
 - The apk will be saved under this location: `[project]/build/app/outputs/flutter-apk/`
-- We can also build appbundle (.aab) by running this command: `flutter build appbundle --flavor {RELEASE_TYPE}`
+- We can also build appbundle (.aab) by running this command: `flutter build appbundle --flavor {RELEASE_TYPE} --dart-define flavor={RELEASE_TYPE}`
 
 ## Build for iOS
 - Follow the tutorial from this link: https://flutter.dev/docs/deployment/ios#create-a-build-archive-with-xcode
 - Don't forget to add the release type behind the build command
-- For example `flutter build ipa --flavor {RELEASE_TYPE}`
+- For example `flutter build ipa --flavor {RELEASE_TYPE} --dart-define flavor={RELEASE_TYPE}`
 
 For more information, check out the [official documentation](https://flutter.dev/docs 'documentation')

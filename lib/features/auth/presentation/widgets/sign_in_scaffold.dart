@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../../../extra/l10n/l10n.dart';
+import '../../../../l10n/l10n.dart';
 import '../../shared/providers.dart';
 import 'sign_in_form.dart';
 

@@ -8,7 +8,7 @@ import '../../../auth/shared/providers.dart';
 import '../../../home/core/presentation/home_page.dart';
 import '../../../home/counter/presentation/counter_page.dart';
 import '../../../splash/presentation/splash_page.dart';
-import 'name_route.dart';
+import 'route_names.dart';
 
 class RouterNotifier extends ChangeNotifier {
   RouterNotifier(this._ref) {
@@ -23,34 +23,34 @@ class RouterNotifier extends ChangeNotifier {
   String? redirectLogic(GoRouterState state) {
     final authState = _ref.read(authNotifierProvider);
 
-    final areWeSigningIn = state.location == signInRoute;
+    final areWeSigningIn = state.location == RouteNames.signInRoute;
 
     return authState.maybeMap(
-      authenticated: (_) => areWeSigningIn ? homeRoute : null,
-      orElse: () => areWeSigningIn ? null : signInRoute,
+      authenticated: (_) => areWeSigningIn ? RouteNames.homeRoute : null,
+      orElse: () => areWeSigningIn ? null : RouteNames.signInRoute,
     );
   }
 
   List<GoRoute> get routes {
     return [
       GoRoute(
-        name: defaultNameRoute,
-        path: defaultRoute,
+        name: RouteNames.defaultNameRoute,
+        path: RouteNames.defaultRoute,
         builder: (context, state) => const SplashPage(),
       ),
       GoRoute(
-        name: signInNameRoute,
-        path: signInRoute,
+        name: RouteNames.signInNameRoute,
+        path: RouteNames.signInRoute,
         builder: (context, state) => const SignInPage(),
       ),
       GoRoute(
-        name: homeNameRoute,
-        path: homeRoute,
+        name: RouteNames.homeNameRoute,
+        path: RouteNames.homeRoute,
         builder: (context, state) => const HomePage(),
         routes: [
           GoRoute(
-            name: counterNameRoute,
-            path: counterRoute,
+            name: RouteNames.counterNameRoute,
+            path: RouteNames.counterRoute,
             builder: (context, state) => const CounterPage(),
           ),
         ],

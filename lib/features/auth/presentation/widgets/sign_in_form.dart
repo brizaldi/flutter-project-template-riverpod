@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../../../extra/l10n/l10n.dart';
+import '../../../../l10n/l10n.dart';
 import '../../shared/providers.dart';
 
 class SignInForm extends HookConsumerWidget {

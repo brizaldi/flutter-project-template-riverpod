@@ -2,7 +2,7 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../../extra/l10n/l10n.dart';
+import '../../../l10n/l10n.dart';
 import '../../core/presentation/widgets/alert_helper.dart';
 import '../../core/presentation/widgets/loading_overlay.dart';
 import '../domain/auth_failure.dart';

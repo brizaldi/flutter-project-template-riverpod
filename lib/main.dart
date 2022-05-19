@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import 'extra/config/configuration.dart';
+import '/config/configuration.dart';
 import 'features/core/presentation/app_widget.dart';
 
 void main() => Main();

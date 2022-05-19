@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../../../../extra/l10n/l10n.dart';
+import '../../../../../l10n/l10n.dart';
 import '../../../../auth/shared/providers.dart';
-import '../../../../core/application/routes/name_route.dart';
+import '../../../../core/application/routes/route_names.dart';
 import '../../shared/providers.dart';
 
 class HomeScaffold extends HookConsumerWidget {
@@ -43,7 +43,7 @@ class HomeScaffold extends HookConsumerWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => context.goNamed(counterNameRoute),
+        onPressed: () => context.goNamed(RouteNames.counterNameRoute),
         child: const Icon(Icons.chevron_right),
       ),
     );

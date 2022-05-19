@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../../../extra/l10n/l10n.dart';
+import '../../../../l10n/l10n.dart';
 import '../../../auth/application/sign_out/sign_out_notifier.dart';
 import '../../../auth/shared/providers.dart';
 import '../../../core/presentation/widgets/alert_helper.dart';

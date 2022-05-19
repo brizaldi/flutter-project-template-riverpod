@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
-import '../../../extra/config/configuration.dart';
-import '../../../extra/constants/strings.dart';
-import '../../../extra/l10n/l10n.dart';
-import '../../../extra/style/style.dart';
+import '../../../config/configuration.dart';
+import '../../../constants/strings.dart';
+import '../../../l10n/l10n.dart';
+import '../../../style/style.dart';
 import '../../auth/shared/providers.dart';
 import '../shared/providers.dart';
 

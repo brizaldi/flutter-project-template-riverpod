@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
 
+import '../../../utils/value_validators.dart';
 import '../../core/domain/failures.dart';
 import '../../core/domain/value_objects.dart';
-import '../../core/domain/value_validators.dart';
 
 class Email extends ValueObject<String> {
   factory Email(String input) {

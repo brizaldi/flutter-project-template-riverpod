@@ -10,7 +10,6 @@ import 'package:logging/logging.dart';
 
 import '../style/style.dart';
 import '../utils/logging.dart';
-import '../utils/string_utils.dart';
 
 part 'src/build_config.dart';
 part 'src/env.dart';

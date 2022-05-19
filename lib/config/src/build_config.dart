@@ -84,8 +84,7 @@ class BuildConfig {
   final int receiveTimeout;
   final Flavor flavor;
 
-  static String flavorName() =>
-      StringUtils.enumToName(_instance.flavor.toString());
+  static String flavorName() => _instance.flavor.name;
 
   static bool isProduction() => _instance.flavor == Flavor.release;
 

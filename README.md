@@ -9,6 +9,9 @@ Dart SDK: 2.17.0
 |:---:|:---:|:---:|:---:|:---:|:---:|
 | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ |
 
+## Live Demo
+https://brizaldi.github.io/flutter_project_template_riverpod/
+
 ## Installation
 - Add [Flutter](https://flutter.dev/docs/get-started/install 'Flutter') to your machine
 - Open this project folder with Terminal/CMD

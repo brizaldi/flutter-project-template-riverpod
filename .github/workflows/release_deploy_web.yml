@@ -1,0 +1,26 @@
+name: Deploy to Github Pages
+
+on:
+  push:
+    branches: [master]
+    paths-ignore:
+      - '**/README.md'
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      FLUTTER_VERSION: "3.0.0"
+      FLAVOR: "production"
+    steps:
+      - uses: actions/checkout@v2
+      - uses: subosito/flutter-action@v1
+      - run: flutter pub get
+      - run: flutter packages pub run build_runner build --delete-conflicting-outputs
+      - uses: bluefireteam/flutter-gh-pages@v7
+        with:
+          baseHref: /flutter_project_template_riverpod/
+          customArgs: --dart-define="flavor=$FLAVOR"

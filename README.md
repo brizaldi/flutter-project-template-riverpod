@@ -7,7 +7,7 @@ Dart SDK: >=2.17.0
 ## Supported Platforms
 | Android | iOS | Web | Windows | MacOS | Linux |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| ✅ | ✅ | ✅ | ❌ | ❌ | ❌ |
+| ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
 
 ## Live Demo
 https://brizaldi.github.io/flutter_project_template_riverpod/

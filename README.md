@@ -1,4 +1,4 @@
-# flutter_project_template_riverpod
+# flutter-project-template-riverpod
 
 ## Requirements
 Flutter: >=3.0.0
@@ -10,7 +10,7 @@ Dart SDK: >=2.17.0
 | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
 
 ## Live Demo
-https://brizaldi.github.io/flutter_project_template_riverpod/
+https://brizaldi.github.io/flutter-project-template-riverpod/
 
 ## Installation
 - Add [Flutter](https://flutter.dev/docs/get-started/install 'Flutter') to your machine

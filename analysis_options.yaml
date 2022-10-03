@@ -548,7 +548,7 @@ linter:
     # RydMike                 : https://gist.github.com/rydmike/fdb53ddd933c37d20e6f3188a936cd4c
     #   PACKAGE:     enabled  : By commenting it out. (Default, even if is not a package, we start with this.)
     #   APPLICATION: disabled : With false value. (When/if short lines become problematic. We sometimes like 100 chars.)
-    # lines_longer_than_80_chars: false
+    lines_longer_than_80_chars: false
 
     # DO define default behavior outside switch statements.
     #

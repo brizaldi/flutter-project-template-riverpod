@@ -41,12 +41,9 @@ class BuildConfig {
   static late BuildConfig _instance;
 
   static void init({String? flavor}) {
-    debugPrint(
-        '╔══════════════════════════════════════════════════════════════╗');
-    debugPrint(
-        '                    Build Flavor: $flavor                       ');
-    debugPrint(
-        '╚══════════════════════════════════════════════════════════════╝');
+    debugPrint('╔══════════════════════════════════════════════════════════════╗');
+    debugPrint('                    Build Flavor: $flavor                       ');
+    debugPrint('╚══════════════════════════════════════════════════════════════╝');
     switch (flavor) {
       case 'development':
         _instance = const BuildConfig._development();
@@ -84,11 +81,11 @@ class BuildConfig {
   final int receiveTimeout;
   final Flavor flavor;
 
-  static String flavorName() => _instance.flavor.name;
+  static String get flavorName => _instance.flavor.name;
 
-  static bool isProduction() => _instance.flavor == Flavor.release;
+  static bool get isProduction => _instance.flavor == Flavor.release;
 
-  static bool isStaging() => _instance.flavor == Flavor.staging;
+  static bool get isStaging => _instance.flavor == Flavor.staging;
 
-  static bool isDevelopment() => _instance.flavor == Flavor.development;
+  static bool get isDevelopment => _instance.flavor == Flavor.development;
 }

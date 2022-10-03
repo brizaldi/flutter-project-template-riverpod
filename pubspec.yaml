@@ -16,19 +16,19 @@ dependencies:
     sdk: flutter
 
   #* UI
-  cached_network_image: ^3.2.1
-  flash: ^2.0.3+2
+  cached_network_image: ^3.2.2
+  flash: ^2.0.5
   flutter_keyboard_visibility: ^5.3.0
   google_fonts: ^3.0.1
 
   #* Icons
-  flutter_vector_icons: ^1.0.0
+  flutter_vector_icons: ^2.0.0
 
   #* Firebase
-  firebase_analytics: ^9.2.0
-  firebase_core: ^1.19.2
-  firebase_crashlytics: ^2.8.5
-  firebase_messaging: ^12.0.0
+  firebase_analytics: ^9.3.7
+  firebase_core: ^1.24.0
+  firebase_crashlytics: ^2.8.12
+  firebase_messaging: ^13.0.4
 
   #* Local notification
   awesome_notifications: ^0.6.21
@@ -39,19 +39,19 @@ dependencies:
 
   #* Dart data class
   freezed_annotation: ^2.1.0
-  json_annotation: ^4.6.0
+  json_annotation: ^4.7.0
 
   #* State management
-  hooks_riverpod: ^1.0.4
+  hooks_riverpod: ^2.0.1
 
   #* Logging
   logging: ^1.0.2
 
   #* Routing
-  go_router: ^4.1.0
+  go_router: ^5.0.5
 
   #* Persistent storage
-  flutter_secure_storage: ^5.0.2
+  flutter_secure_storage: ^6.0.0
   hive_flutter: ^1.1.0
   hive: ^2.2.3
 
@@ -63,18 +63,17 @@ dependencies:
 
   #* Misc
   dartz: ^0.10.1
-  money2: ^3.1.3
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
   #* Code generators
-  build_runner: ^2.2.0
-  flutter_launcher_icons: ^0.9.3
-  flutter_native_splash: ^2.2.4
-  freezed: ^2.1.0+1
-  json_serializable: ^6.3.1
+  build_runner: ^2.2.1
+  flutter_launcher_icons: ^0.10.0
+  flutter_native_splash: ^2.2.10+1
+  freezed: ^2.1.1
+  json_serializable: ^6.4.1
 
 flutter:
   # The following line ensures that the Material Icons font is

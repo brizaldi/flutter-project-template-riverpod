@@ -14,7 +14,6 @@ final hiveProvider = Provider(
 final routerProvider = Provider<GoRouter>((ref) {
   final router = RouterNotifier(ref);
   return GoRouter(
-    urlPathStrategy: UrlPathStrategy.path,
     refreshListenable: router,
     redirect: router.redirectLogic,
     routes: router.routes,

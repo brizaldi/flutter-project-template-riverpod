@@ -24,7 +24,7 @@ final initializationProvider = FutureProvider<Unit>((ref) async {
     )
     ..interceptors.add(ref.read(authInterceptorProvider));
 
-  if (BuildConfig.get().flavor != Flavor.release) {
+  if (!BuildConfig.isProduction) {
     ref.read(dioProvider).interceptors.add(PrettyDioLogger(
           requestHeader: true,
           requestBody: true,

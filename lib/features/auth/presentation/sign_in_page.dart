@@ -31,9 +31,7 @@ class SignInPage extends HookConsumerWidget {
               noConnection: (_) => l10n.noConnectionError,
             ),
           ),
-          (_) => ref
-              .read(authNotifierProvider.notifier)
-              .checkAndUpdateAuthStatus(),
+          (_) => ref.read(authNotifierProvider.notifier).checkAndUpdateAuthStatus(),
         ),
       ),
     );

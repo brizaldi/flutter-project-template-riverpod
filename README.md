@@ -1,7 +1,7 @@
 # flutter-project-template-riverpod
 
 ## Requirements
-Flutter: >=3.0.0
+Flutter: >=3.3.0
 Dart SDK: >=2.17.0
 
 ## Supported Platforms

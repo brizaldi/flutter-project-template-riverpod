@@ -18,6 +18,8 @@ abstract class Env {
 
       Themes.initUiOverlayStyle();
 
+      usePathUrlStrategy();
+
       final app = await onCreate();
 
       runApp(

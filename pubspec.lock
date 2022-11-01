@@ -493,7 +493,7 @@ packages:
     source: hosted
     version: "2.0.0"
   flutter_web_plugins:
-    dependency: transitive
+    dependency: "direct main"
     description: flutter
     source: sdk
     version: "0.0.0"

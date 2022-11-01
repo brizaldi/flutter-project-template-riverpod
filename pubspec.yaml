@@ -14,6 +14,8 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
 
   #* UI
   cached_network_image: ^3.2.2

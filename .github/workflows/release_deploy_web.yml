@@ -21,5 +21,5 @@ jobs:
       - run: flutter packages pub run build_runner build --delete-conflicting-outputs
       - uses: bluefireteam/flutter-gh-pages@v7
         with:
-          baseHref: /flutter-project-template-riverpod/
+          baseHref: /flutter_project_template_riverpod/
           customArgs: --dart-define="flavor=$FLAVOR"

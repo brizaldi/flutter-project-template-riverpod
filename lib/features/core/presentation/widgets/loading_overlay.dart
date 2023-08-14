@@ -29,7 +29,7 @@ class LoadingOverlay extends StatelessWidget {
               const SizedBox(height: 8),
               Text(
                 'Please Wait',
-                style: theme.textTheme.bodyText2!.copyWith(
+                style: theme.textTheme.bodyMedium!.copyWith(
                   color: Colors.white,
                   fontSize: 16,
                 ),

@@ -23,7 +23,7 @@ class RouterNotifier extends ChangeNotifier {
   String? redirectLogic(BuildContext context, GoRouterState state) {
     final authState = _ref.read(authNotifierProvider);
 
-    final areWeSigningIn = state.location == RouteNames.signInRoute;
+    final areWeSigningIn = state.matchedLocation == RouteNames.signInRoute;
 
     return authState.maybeMap(
       authenticated: (_) => areWeSigningIn ? RouteNames.homeRoute : null,

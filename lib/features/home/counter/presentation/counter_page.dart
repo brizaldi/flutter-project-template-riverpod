@@ -19,13 +19,12 @@ class CounterPage extends HookConsumerWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             TextButton(
-              onPressed: () =>
-                  ref.read(counterNotifierProvider.notifier).increment(),
+              onPressed: () => ref.read(counterNotifierProvider.notifier).increment(),
               child: const Text('Increment'),
             ),
             Text(
               counterState.toString(),
-              style: Theme.of(context).textTheme.headline5,
+              style: Theme.of(context).textTheme.headlineSmall,
             ),
           ],
         ),

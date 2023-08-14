@@ -15,8 +15,8 @@ class BuildConfig {
       : this._(
           baseUrl: 'https://6128855786a213001729f948.mockapi.io/api/v1/',
           socketUrl: '',
-          connectTimeout: 20000,
-          receiveTimeout: 20000,
+          connectTimeout: const Duration(milliseconds: 20000),
+          receiveTimeout: const Duration(milliseconds: 20000),
           flavor: Flavor.development,
         );
 
@@ -24,8 +24,8 @@ class BuildConfig {
       : this._(
           baseUrl: 'https://6128855786a213001729f948.mockapi.io/api/v1/',
           socketUrl: '',
-          connectTimeout: 20000,
-          receiveTimeout: 20000,
+          connectTimeout: const Duration(milliseconds: 20000),
+          receiveTimeout: const Duration(milliseconds: 20000),
           flavor: Flavor.staging,
         );
 
@@ -33,8 +33,8 @@ class BuildConfig {
       : this._(
           baseUrl: 'https://6128855786a213001729f948.mockapi.io/api/v1/',
           socketUrl: '',
-          connectTimeout: 20000,
-          receiveTimeout: 20000,
+          connectTimeout: const Duration(milliseconds: 20000),
+          receiveTimeout: const Duration(milliseconds: 20000),
           flavor: Flavor.release,
         );
 
@@ -77,8 +77,8 @@ class BuildConfig {
 
   final String baseUrl;
   final String socketUrl;
-  final int connectTimeout;
-  final int receiveTimeout;
+  final Duration connectTimeout;
+  final Duration receiveTimeout;
   final Flavor flavor;
 
   static String get flavorName => _instance.flavor.name;

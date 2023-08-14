@@ -20,8 +20,7 @@ class HomeScaffold extends HookConsumerWidget {
         title: Text(l10n.home),
         actions: [
           IconButton(
-            onPressed: () =>
-                ref.read(signOutNotifierProvider.notifier).signOut(),
+            onPressed: () => ref.read(signOutNotifierProvider.notifier).signOut(),
             icon: const Icon(Icons.logout),
           ),
         ],
@@ -31,13 +30,12 @@ class HomeScaffold extends HookConsumerWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             TextButton(
-              onPressed: () =>
-                  ref.read(counterNotifierProvider.notifier).increment(),
+              onPressed: () => ref.read(counterNotifierProvider.notifier).increment(),
               child: const Text('Increment'),
             ),
             Text(
               counterState.toString(),
-              style: Theme.of(context).textTheme.headline5,
+              style: Theme.of(context).textTheme.headlineSmall,
             ),
           ],
         ),

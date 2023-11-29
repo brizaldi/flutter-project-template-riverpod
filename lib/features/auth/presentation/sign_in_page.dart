@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -31,7 +33,9 @@ class SignInPage extends HookConsumerWidget {
               noConnection: (_) => l10n.noConnectionError,
             ),
           ),
-          (_) => ref.read(authNotifierProvider.notifier).checkAndUpdateAuthStatus(),
+          (_) => unawaited(ref
+              .read(authNotifierProvider.notifier)
+              .checkAndUpdateAuthStatus()),
         ),
       ),
     );

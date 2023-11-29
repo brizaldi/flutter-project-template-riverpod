@@ -1,4 +1,4 @@
-part of style;
+part of '../style.dart';
 
 mixin Themes {
   static void initUiOverlayStyle() {

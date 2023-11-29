@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -20,7 +22,8 @@ class HomeScaffold extends HookConsumerWidget {
         title: Text(l10n.home),
         actions: [
           IconButton(
-            onPressed: () => ref.read(signOutNotifierProvider.notifier).signOut(),
+            onPressed: () =>
+                unawaited(ref.read(signOutNotifierProvider.notifier).signOut()),
             icon: const Icon(Icons.logout),
           ),
         ],
@@ -30,7 +33,8 @@ class HomeScaffold extends HookConsumerWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             TextButton(
-              onPressed: () => ref.read(counterNotifierProvider.notifier).increment(),
+              onPressed: () =>
+                  ref.read(counterNotifierProvider.notifier).increment(),
               child: const Text('Increment'),
             ),
             Text(

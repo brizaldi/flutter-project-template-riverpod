@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
@@ -19,8 +21,8 @@ class HomePage extends HookConsumerWidget {
       signOutNotifierProvider,
       (_, state) => state.maybeWhen(
         orElse: () => null,
-        success: () =>
-            ref.read(authNotifierProvider.notifier).checkAndUpdateAuthStatus(),
+        success: () => unawaited(
+            ref.read(authNotifierProvider.notifier).checkAndUpdateAuthStatus()),
         failure: (failure) => AlertHelper.showSnackBar(
           context,
           message: failure.map(

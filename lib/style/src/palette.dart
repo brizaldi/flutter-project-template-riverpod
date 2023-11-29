@@ -1,4 +1,4 @@
-part of style;
+part of '../style.dart';
 
 class Palette {
   static const primaryColor = Color(0xff13b9fd);

@@ -1,4 +1,4 @@
-part of configuration;
+part of '../configuration.dart';
 
 abstract class Env {
   Env() {
@@ -11,7 +11,7 @@ abstract class Env {
       debugPrint = (String? message, {int? wrapWidth}) {};
     }
 
-    runZonedGuarded(() async {
+    unawaited(runZonedGuarded(() async {
       WidgetsFlutterBinding.ensureInitialized();
 
       BuildConfig.init(flavor: const String.fromEnvironment('flavor'));
@@ -30,7 +30,7 @@ abstract class Env {
     }, (obj, stack) {
       debugPrint(obj.toString());
       debugPrint(stack.toString());
-    });
+    }));
   }
 
   FutureOr<HookConsumerWidget> onCreate();

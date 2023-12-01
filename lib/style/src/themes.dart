@@ -11,7 +11,7 @@ mixin Themes {
   }
 
   static ThemeData lightTheme(BuildContext context) {
-    return ThemeData.light().copyWith(
+    return ThemeData.light(useMaterial3: false).copyWith(
       visualDensity: VisualDensity.adaptivePlatformDensity,
       colorScheme: const ColorScheme.light(
         primary: Palette.primaryColor,
@@ -25,7 +25,7 @@ mixin Themes {
   }
 
   static ThemeData darkTheme(BuildContext context) {
-    return ThemeData.dark().copyWith(
+    return ThemeData.dark(useMaterial3: false).copyWith(
       visualDensity: VisualDensity.adaptivePlatformDensity,
       colorScheme: const ColorScheme.dark(
         primary: Palette.primaryColor,

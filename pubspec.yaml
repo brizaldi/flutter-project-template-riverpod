@@ -46,6 +46,9 @@ dependencies:
   #* State management
   hooks_riverpod: ^2.4.9
 
+  #* Functional programming
+  fpdart: ^1.1.0
+
   #* Logging
   logging: ^1.2.0
 
@@ -62,9 +65,6 @@ dependencies:
 
   #* Date Time util
   jiffy: ^6.2.1
-
-  #* Misc
-  dartz: ^0.10.1
   
 dependency_overrides:
   intl: ^0.18.0

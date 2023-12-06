@@ -1,6 +1,6 @@
-import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:fpdart/fpdart.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 

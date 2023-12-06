@@ -1,4 +1,4 @@
-import 'package:dartz/dartz.dart';
+import 'package:fpdart/fpdart.dart';
 
 import '../../../utils/value_validators.dart';
 import '../../core/domain/failures.dart';

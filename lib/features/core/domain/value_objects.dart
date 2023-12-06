@@ -1,4 +1,4 @@
-import 'package:dartz/dartz.dart';
+import 'package:fpdart/fpdart.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../utils/value_validators.dart';
@@ -12,8 +12,7 @@ abstract class ValueObject<T> {
 
   /// Throws [UnexpectedValueError] containing the [ValueFailure]
   T getOrCrash() {
-    // id = identity - same as writing (right) => right
-    return value.fold((f) => throw UnexpectedValueError(f), id);
+    return value.fold((f) => throw UnexpectedValueError(f), (right) => right);
   }
 
   Either<ValueFailure<dynamic>, Unit> get failureOrUnit {

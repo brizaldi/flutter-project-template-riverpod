@@ -1,5 +1,5 @@
-import 'package:dartz/dartz.dart';
 import 'package:flutter/services.dart';
+import 'package:fpdart/fpdart.dart';
 
 import '../../core/infrastructure/exceptions.dart';
 import '../domain/auth_failure.dart';
